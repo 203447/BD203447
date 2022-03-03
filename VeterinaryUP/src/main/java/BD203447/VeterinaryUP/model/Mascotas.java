@@ -1,9 +1,9 @@
-package BD203447.VeterinaryUP.model;
+/*package BD203447.VeterinaryUP.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity()
+@Entity
 @Table(name = "mascotas")
 public class Mascotas {
 
@@ -87,3 +87,4 @@ public class Mascotas {
     }
 
 }
+*/

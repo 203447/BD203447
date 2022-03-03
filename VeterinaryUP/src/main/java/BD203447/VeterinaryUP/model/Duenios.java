@@ -1,34 +1,47 @@
 package BD203447.VeterinaryUP.model;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity()
-@Table(name = "dueños")
+@Entity
+@Table(name = "duenos")
 public class Duenios {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
+
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
     @Column(name = "nombre")
-    private char nombre;
+    private String nombre;
 
     @Column(name = "apellidos")
-    private char apellidos;
+    private String apellidos;
 
     @Column(name = "correo")
-    private char correo;
+    private String correo;
 
     @Column(name = "telefono")
-    private char telefono;
+    private String telefono;
 
     @Column(name = "direccion")
-    private char direccion;
+    private String direccion;
 
     @Column(name = "municipio")
-    private char municipio;
+    private String municipio;
 
     @Column(name = "codigo_postal")
     private int codigo_postal;
 
-    public Duenios(char nombre, char apellidos, char correo, char telefono, char direccion, char municipio, int codigo_postal) {
+    public Duenios(String nombre, String apellidos, String correo, String telefono, String direccion, String municipio, int codigo_postal) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
@@ -41,52 +54,52 @@ public class Duenios {
     public Duenios(){
     }
 
-    public char getNombre(){
+    public String getNombre(){
         return nombre;
     }
 
-    public void setNombre(char nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public char getApellidos(){
+    public String getApellidos(){
         return apellidos;
     }
 
-    public void setApellidos(char apellidos){
+    public void setApellidos(String apellidos){
         this.apellidos = apellidos;
     }
 
-    public char getCorreo(){
+    public String getCorreo(){
         return correo;
     }
 
-    public void setCorreo(char correo){
+    public void setCorreo(String correo){
         this.correo = correo;
     }
 
-    public char getTelefono(){
+    public String getTelefono(){
         return telefono;
     }
 
-    public void setTelefono(char telefono){
+    public void setTelefono(String telefono){
         this.telefono = telefono;
     }
 
-    public char getDireccion(){
+    public String getDireccion(){
         return direccion;
     }
 
-    public void setDireccion(char direccion){
+    public void setDireccion(String direccion){
 
         this.direccion = direccion;
     }
 
-    public char getMunicipio(){
+    public String getMunicipio(){
         return municipio;
     }
 
-    public void setMunicipio(char municipio){
+    public void setMunicipio(String municipio){
         this.municipio = municipio;
     }
 
@@ -94,8 +107,26 @@ public class Duenios {
         return codigo_postal;
     }
 
-    public void setCodigo_postal(char codigo_postal){
+    public void setCodigo_postal(int codigo_postal){
         this.codigo_postal = codigo_postal;
     }
 
+
+   // @Override
+   // public String toString(){
+      //  return
+   // }
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

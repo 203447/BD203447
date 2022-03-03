@@ -1,9 +1,9 @@
-package BD203447.VeterinaryUP.model;
+/*package BD203447.VeterinaryUP.model;
 import javax.persistence.*;
 import javax.persistence.Column;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-@Entity()
+@Entity
 @Table (name = "citas")
 public class Citas {
 
@@ -53,3 +53,4 @@ public class Citas {
 
 
 }
+*/

@@ -1,4 +1,5 @@
-package BD203447.VeterinaryUP.repository;
+/*package BD203447.VeterinaryUP.repository;
 
 public interface MascotasRepository {
 }
+*/
