@@ -1,5 +1,10 @@
-/*package BD203447.VeterinaryUP.repository;
+package BD203447.VeterinaryUP.repository;
 
-public interface MascotasRepository {
+import BD203447.VeterinaryUP.model.Mascotas;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface MascotasRepository extends CrudRepository <Mascotas, Long> {
+
 }
-*/

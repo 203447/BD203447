@@ -20,15 +20,15 @@ public class Mascotas {
     private String raza;
 
     @Column(name = "edad")
-    private int edad;
+    private String edad;
 
     @Column(name = "sexo")
-    private int sexo;
+    private String sexo;
 
     @Column(name = "dueño")
     private String duenio;
 
-    public Mascotas(Long idmascota, String nombre, double peso, String raza, int edad, int sexo, String duenio) {
+    public Mascotas(Long idmascota, String nombre, double peso, String raza, String edad, String sexo, String duenio) {
         this.idmascota = idmascota;
         this.nombre = nombre;
         this.peso = peso;
@@ -74,19 +74,19 @@ public class Mascotas {
         this.raza = raza;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
-    public int getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(int sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
