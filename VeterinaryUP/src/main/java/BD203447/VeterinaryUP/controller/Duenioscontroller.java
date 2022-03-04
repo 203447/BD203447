@@ -15,25 +15,25 @@ public class Duenioscontroller {
     @Autowired
     DueniosServicios dueniosServicios;
 
-    // Aca podemos  ver la lista de los duenos
+    //  ver la lista de los duenos
     @GetMapping()
     public ArrayList<Duenios> obtenerDuenios(){
         return dueniosServicios.obtenerDuenios();
     }
 
-    // aca podemos guardar los duenos en este caso agregamos con el postman
+    // se guardan los duenios y agregamos con el postman
     @PostMapping()
     public Duenios guardarDuenios(@RequestBody Duenios duenios){
         return this.dueniosServicios.guardarDuenios(duenios);
     }
 
-   // aca buscarmos el dueno por medio del ID
+   // buscamos el dueno por medio del ID
     @GetMapping( path = "/{id}")
     public Optional<Duenios> obtenerDueniosPorId(@PathVariable("id") Long id) {
         return this.dueniosServicios.obtenerPorId(id);
     }
 
-    // Aca eliminamos el usuario por medio el ID
+    //  eliminamos el usuario por medio el ID
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.dueniosServicios.eliminarDuenios(id);
