@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class Duenioscontroller {
     @Autowired
     DueniosServicios dueniosServicios;
@@ -22,7 +23,7 @@ public class Duenioscontroller {
     }
 
     // aca podemos guardar los duenos en este caso agregamos con el postman
-    @PostMapping()
+    @PostMapping(path = "/addDuenio")
     public Duenios guardarDuenios(@RequestBody Duenios duenios){
         return this.dueniosServicios.guardarDuenios(duenios);
     }
